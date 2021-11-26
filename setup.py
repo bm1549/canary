@@ -1,12 +1,22 @@
 import setuptools
+import sys
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
+# Default
+version = "SNAPSHOT"
+
+if "--version" in sys.argv:
+    idx = sys.argv.index("--version")
+    sys.argv.pop(idx)
+    version = sys.argv.pop(idx)
+
+print("Using version " + version)
 
 setuptools.setup(
     name='py-canary-2',
-    version='0.6.2',
+    version=version,
     author="Brian Marks",
     description="Python API for the Canary App",
     license="MIT",
