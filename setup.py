@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name='py-canary-2',
-    version='0.6.1',
+    version='0.6.2',
     author="Brian Marks",
     description="Python API for the Canary App",
     license="MIT",
